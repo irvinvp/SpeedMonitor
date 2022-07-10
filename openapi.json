@@ -1,0 +1,121 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API SpeedMonitor",
+    "description": "API base para sistema de SpeedMonitor",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Speed Info",
+      "description": "Speed Info"
+    }
+  ],
+  "paths": {
+    "/info": {
+      "get": {
+        "tags": [
+          "Speed Info"
+        ],
+        "summary": "Regresa los datos generales de conexion",
+        "description": "Regresa los datos generales de conexion",
+        "operationId": "Speed_info",
+        "parameters": [
+          {
+            "name": "mac",
+            "in": "query",
+            "description": "Mac Address",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operacion correcta",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/dato1"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No existe metodo",
+            "content": {}
+          },
+          "501": {
+            "description": "Falta parametro MAC",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "dato1": {
+        "type": "object",
+        "properties": {
+          "time_online": {
+            "type": "integer"
+          },
+          "time_offline": {
+            "type": "integer"
+          },
+          "up_time": {
+            "type": "integer"
+          },
+          "mac": {
+            "type": "string"
+          },
+          "ip": {
+            "type": "string"
+          },
+          "port": {
+            "type": "integer"
+          },
+          "restart": {
+            "type": "integer"
+          },
+          "last_restart": {
+            "type": "integer"
+          },
+          "first": {
+            "type": "integer"
+          },
+          "ping": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "time": {
+                  "type": "integer"
+                },
+                "ping": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
