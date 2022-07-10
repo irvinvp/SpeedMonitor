@@ -2,6 +2,10 @@ FROM node:14-slim
 WORKDIR /usr/src/app
 COPY . .
 RUN npm install
+# UDP
+LABEL traefik.udp.routers.monitor1.entrypoints=udp1
+LABEL traefik.udp.services.monitor1.loadbalancer.server.port=5555
+# TCP
 LABEL traefik.http.routers.monitor.rule="Host(`monitor.nixi.pw`)"
 LABEL traefik.http.routers.monitor.tls.certresolver="myresolver"
 LABEL traefik.http.services.monitor.loadbalancer.server.port="5555"
