@@ -102,6 +102,9 @@ off_line();
 setInterval(off_line, 10 * 1000);
 
 function metrics(data) {
+  if (typeof data.history == "undefined") {
+    return {};
+  }
   let time_online = 0;
   let time_offline = 0;
   if (data.history.length > 1) {
