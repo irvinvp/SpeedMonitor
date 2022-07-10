@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Hello Command Center.</h1>
+    <p>El resultado es:</p>
+    <p id="dato1"></p>
+    <script>
+      let api = ""; // http://localhost:3428 url de la api (para externas)
+      async function run() {
+        // Buscar URL
+        let params = new URLSearchParams(window.location.search);
+        if (params.has("serial")) {
+          let response = await fetch(
+            api + "/api/v1/last_position?serial=" + params.get("serial")
+          );
+          let commands = await response.json();
+          console.log(commands);
+          document.getElementById("dato1").innerHTML = commands.message;
+        } else {
+          document.getElementById("dato1").innerHTML =
+            "No se encontro el serial";
+        }
+      }
+      run();
+    </script>
+  </body>
+</html>
