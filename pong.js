@@ -1,6 +1,7 @@
 const dgram = require("dgram");
 const server = dgram.createSocket("udp4");
 const http = require("http");
+const fs = require("fs");
 // Opciones del servidor
 const port = process.env.port || 5555; // Puerto por defecto
 const port_api = process.env.port_api || 5555; // Puerto por defecto
