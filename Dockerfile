@@ -14,6 +14,6 @@ LABEL traefik.http.middlewares.monitor-headers.headers.accessControlAllowHeaders
 LABEL traefik.http.middlewares.monitor-headers.headers.accessControlAllowMethods="GET,OPTIONS,POST,PUT,DELETE,HEAD"
 LABEL traefik.http.middlewares.monitor-headers.headers.accesscontrolalloworiginlist="*"
 # Carga de middlewares
-LABEL traefik.http.routers.irvin.middlewares="monitor-ratelimit,monitor-compress,monitor-inflightreq,monitor-headers"
+LABEL traefik.http.routers.monitor.middlewares="monitor-ratelimit,monitor-compress,monitor-inflightreq,monitor-headers"
 # Env para configurar conexiones
 CMD [ "node", "pong.js" ]
