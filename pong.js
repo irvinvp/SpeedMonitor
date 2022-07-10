@@ -155,6 +155,22 @@ async function service_api(path, method, params, body) {
   let res = { headers: {}, data: "", status: 200 };
   let DB;
   switch (path) {
+    case "/api": // API documentation
+      res.status = 200;
+      res.headers = {
+        "Content-Type": "text/html",
+        "Access-Control-Allow-Origin": "*",
+      };
+      res.data = fs.readFileSync("./api.html");
+      break;
+    case "/openapi.json": // API documentation
+      res.status = 200;
+      res.headers = {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      };
+      res.data = fs.readFileSync("./openapi.json");
+      break;
     case "/api/v1/info":
       if (method === "GET" && params.has("mac")) {
         res.status = 200;
