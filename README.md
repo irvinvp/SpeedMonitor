@@ -9,7 +9,7 @@ lan nombre_de_lan password_lan
 ```
 ### Comando para cambiar servidor de apunte, tiene que tener abierto el puerto 5555/udp
 ```
-serv nombre del servidor
+serv nombre_del_servidor
 ```
 ### Datos de equipo demo
 ```
