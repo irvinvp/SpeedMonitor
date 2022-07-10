@@ -11,7 +11,7 @@ lan nombre_de_lan password_lan
 ```
 serv nombre del servidor
 ```
-Datos de equipo demo
+### Datos de equipo demo
 ```
 Serial: 4cebd67d04a8
 Red: SpeedMonitor-04a8
