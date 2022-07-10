@@ -17,3 +17,7 @@ Serial: 4cebd67d04a8
 Red: SpeedMonitor-04a8
 Password: STOvWfQSo
 ```
+### Servidor de escucha
+```
+https://monitor.nixi.pw/api#/
+```
