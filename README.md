@@ -1,8 +1,8 @@
 # Speed Monitor
 ![flujo](https://github.com/irvinvp/SpeedMonitor/actions/workflows/main.yml/badge.svg)
 
-## Comandos UPD
-Los comando deben de enviarse a UDP puerto 8081.
+## Comandos UDP
+Los comando deben de enviarse a UDP puerto 8081 a la IP 192.168.4.1 
 ### Comando para cambiar la lan de conexion
 ```
 lan nombre_de_lan password_lan
