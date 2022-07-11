@@ -3,6 +3,8 @@
 
 ## Comandos UDP
 Los comando deben de enviarse a UDP puerto 8081 a la IP 192.168.4.1 
+
+![image](https://user-images.githubusercontent.com/10320683/178340747-c1d09ced-df1a-4651-99c4-961c5e01ac1d.png)
 ### Comando para cambiar la lan de conexion
 ```
 lan nombre_de_lan password_lan
