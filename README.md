@@ -22,6 +22,12 @@ Ejemplo
 ```
 serv monitor.nixi.pw
 ```
+#### Respuesta esperada del servidor
+El servidor debe de responder un paquete UDP fijo con la palabra **"pong\r\n"**, al mismo puerto y dirección de origen.
+
+```
+server.send("pong\r\n", rinfo.port, rinfo.address);
+```
 ### Datos de equipo demo
 ```
 Serial: 4cebd67d04a8
