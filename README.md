@@ -30,19 +30,19 @@ La respuesta esperada si fue configurado correctamente es
 ```
 servok monitor.nixi.pw
 ```
-#### Respuesta esperada del servidor
+## Respuesta esperada del servidor
 El servidor debe de responder un paquete UDP fijo con la palabra **"pong\r\n"**, al mismo puerto y dirección de origen.
 
 ```
 server.send("pong\r\n", rinfo.port, rinfo.address);
 ```
-### Datos de equipo demo
+## Datos de equipo demo
 ```
 Serial: 4cebd67d04a8
 Red: SpeedMonitor-04a8
 Password: STOvWfQSo
 ```
-### Servidor de escucha
+## Servidor de escucha para demo
 ```
 https://monitor.nixi.pw/api#/
 ```
