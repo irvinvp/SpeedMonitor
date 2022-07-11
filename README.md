@@ -13,6 +13,10 @@ Ejemplo
 ```
 lan Alfa 0123456789
 ```
+La respuesta esperada si fue configurado correctamete es
+```
+lanok Alfa 0123456789
+```
 #### Comando para cambiar servidor de destino, tiene que tener abierto el puerto 5555/udp
 ![image](https://user-images.githubusercontent.com/10320683/178341503-4ea1d802-e8d8-47b4-a41f-b118e79599da.png)
 ```
@@ -21,6 +25,10 @@ serv nombre_del_servidor
 Ejemplo
 ```
 serv monitor.nixi.pw
+```
+La respuesta esperada si fue configurado correctamente es
+```
+servok monitor.nixi.pw
 ```
 #### Respuesta esperada del servidor
 El servidor debe de responder un paquete UDP fijo con la palabra **"pong\r\n"**, al mismo puerto y dirección de origen.
